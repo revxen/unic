@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - RevX Accessories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">RevX Admin</div>
+    <nav>
+      <a href="index.html">Store</a>
+    </nav>
+  </header>
+
+  <main class="shop-page">
+    <h1>Product Admin</h1>
+
+    <section class="products-section" style="margin-bottom:16px;">
+      <h2>Products</h2>
+      <div style="overflow-x:auto;">
+        <table id="admin-table" class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Tag</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <h2>Add / Edit Product</h2>
+      <form id="product-form" class="admin-form">
+        <input type="hidden" id="prod-id">
+        <div class="row">
+          <input id="prod-name" type="text" placeholder="Name" required>
+          <select id="prod-category" required>
+            <option value="">Category</option>
+            <option value="mobile">Mobile</option>
+            <option value="laptop">Laptop</option>
+            <option value="accessory">Accessory</option>
+          </select>
+          <input id="prod-price" type="number" min="0" placeholder="Price ₹" required>
+        </div>
+        <div class="row">
+          <input id="prod-image" type="text" placeholder="Image path e.g. images/products/xyz.jpg">
+          <input id="prod-tag" type="text" placeholder="Tag e.g. featured, new">
+        </div>
+        <div class="row">
+          <button type="submit" class="btn-primary">Save Product</button>
+          <button type="button" id="btn-reset" class="btn-primary" style="background:none;border:1px solid #4b5563;">
+            Reset Form
+          </button>
+          <button type="button" id="btn-export" class="btn-primary">
+            Export JSON
+          </button>
+        </div>
+      </form>
+
+      <textarea id="export-output" rows="6" style="width:100%;margin-top:10px;font-size:12px;"></textarea>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

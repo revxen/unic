@@ -348,3 +348,37 @@ body {
   background: transparent;
   color: var(--text);
 }
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.admin-table th {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.admin-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.admin-form input,
+.admin-form select {
+  flex: 1 1 160px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+}
